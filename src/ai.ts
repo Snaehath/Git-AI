@@ -1,10 +1,7 @@
-import * as dotenv from "dotenv";
-dotenv.config();
-
-const API_KEY = process.env.GEMINI_API_KEY;
+const API_KEY = "your-api-key"; // paste the api key while compiling and packaging.
 
 const GEMINI_API_URL =
-  "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";
+  "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
 
 export async function generateCommitMessage(diff: string): Promise<string> {
   try {

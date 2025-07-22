@@ -27,11 +27,7 @@ The Git AI Commit VS Code extension automates the process of creating commit mes
 
 ## Configuration
 
-1.  Set the `GEMINI_API_KEY` environment variable to your Gemini API key. You can do this in your `.env` file at the root of your project.
-
-    ```
-    GEMINI_API_KEY=YOUR_GEMINI_API_KEY
-    ```
+1.  Set the `GEMINI_API_KEY`in ai.ts.
 
 ## Usage
 

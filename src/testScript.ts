@@ -1,20 +1,16 @@
 import { generateCommitMessage } from "./ai";
 
 const fakeDiff = `
-diff --git a/utils.js b/utils.js
-index 1a2b3c4..5d6e7f8 100644
---- a/utils.js
-+++ b/utils.js
-@@ -10,7 +10,9 @@
--function calculateSum(a, b) {
--  return a + b;
-+function calculateTotal(a, b, log = false) {
-+  const total = a + b;
-+  if (log) console.log("Total:", total);
-+  return total;
- }
- 
- module.exports = { calculateTotal };
+diff --git a/server.js b/server.js
+index abcd123..ef45678 100644
+--- a/server.js
++++ b/server.js
+@@ -20,7 +20,11 @@
+ app.get('/status', (req, res) => {
+-  res.send('OK');
++  console.log("Status endpoint hit");
++  res.status(200).json({ status: "OK", uptime: process.uptime() });
+ });
 `;
 
 (async () => {

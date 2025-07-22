@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.vscode/
+.env
+.vscodeignore
+git-ai-commit-1.0.0.vsix
+git-ai-commit-1.1.0.vsix
+git-ai-commit-1.2.0.vsix

@@ -1,0 +1,42 @@
+{
+  "name": "git-ai-commit",
+  "version": "1.2.0",
+  "description": "Automatically generate AI commit messages and push using Gemini AI.",
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "main": "./dist/extension.js",
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "npx @vscode/vsce package"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "git-ai.smartPush",
+        "title": "Git AI: Smart Push"
+      },
+      {
+        "command": "git-ai.smartReadme",
+        "title": "Git AI: Smart ReadMe"
+      }
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "node-fetch": "^3.3.2",
+    "simple-git": "^3.28.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.15",
+    "@types/vscode": "^1.102.0",
+    "@vscode/vsce": "^3.6.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
